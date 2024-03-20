@@ -11,5 +11,9 @@ namespace TestItAdapter
         public string DllPath { get; set; }
         public string TmsUrl { get; set; }
         public string TmsApiKey { get; set; }
+        /// <summary>
+        /// Путь до дистрибутива Allure CTL
+        /// </summary>
+        public string TestImporterDirectory { get; set; }
     }
 }

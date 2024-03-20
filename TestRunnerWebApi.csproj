@@ -8,4 +8,8 @@
 
   <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 
+  <ItemGroup>
+    <PackageReference Include="TestIt.ApiClient" Version="2.6.0" />
+  </ItemGroup>
+
 </Project>

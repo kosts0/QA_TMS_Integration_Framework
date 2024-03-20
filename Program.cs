@@ -1,7 +1,10 @@
 using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Newtonsoft.Json.Linq;
 using System.Text;
 using System.Text.Json;
 using TestItAdapter;
+using TestProject;
+using TestRunnerWebApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,13 +32,36 @@ app.MapPut("/runTest", (HttpRequest request, IConfiguration appConfig) =>
         requestContent = reader.ReadToEnd();
     }
     request.Body.Position = 0;
-    Console.WriteLine($"testRunned {DateTime.Now}\n");
+
+    JToken requestBody = JToken.Parse(requestContent);
+
+    Guid testRunId = Guid.Parse(requestBody["TestRunId"]?.ToString());
+    List<string> autotestList = requestBody.SelectTokens("$..AutoTests..Id").Select(t => t.ToString()).ToList();
+    try
+    {
+        string testRunReportFolder = "ExampleTestRun2";
+        CmdHelper.ExecuteCommand($"dotnet test TestProject.dll -v n --filter \"Name~NewTest\" -- TestRunParameters.Parameter(name=\\\"TestRunId\\\", value=\\\"{testRunReportFolder}\\\")", workingDirectory: @"D:\SPBPU\dipl\NUnit\bin\Debug\net6.0");
+        //CmdHelper.ExecuteCommand($@"D:\SPBPU\dipl\NUnit\bin\Debug\net6.0\allure-results\TestRun2 1c7d6d95-86e3-4afc-9a9a-6c8a6694a20a", workingDirectory: @"D:\SPBPU\dipl\TestItAllureImporterVenv", fileName: "UpdateResults.bat");
+        CmdHelper.ExecuteCommand(new ImportCommand(GetConfig(appConfig)) { TestResultDirectory = @$"D:\SPBPU\dipl\NUnit\bin\Debug\net6.0\allure-results\{testRunReportFolder}", TestRunId = testRunId }.ProcessInfo);
+        Console.WriteLine($"testRunned {DateTime.Now}\n");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"TestExec failed {ex.Message}");
+    } 
     return;
 });
 app.MapGet("/", (IConfiguration appConfig) =>
 {
-    RunnerConfig config = new();
-    appConfig.GetSection("RunnerConfig").Bind(config);
+    RunnerConfig config = GetConfig(appConfig);
     return JsonSerializer.Serialize<RunnerConfig>(config);
 });
 app.Run();
+
+
+RunnerConfig GetConfig(IConfiguration appConfig)
+{
+    RunnerConfig config = new();
+    appConfig.GetSection("RunnerConfig").Bind(config);
+    return config;
+}

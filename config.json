@@ -2,6 +2,7 @@
   "RunnerConfig": {
     "DllPath": "D:\\SPBPU\\dipl\\NUnit\\bin\\Debug\\net6.0\\TestProject.dll",
     "TmsUrl": "https://team-fhd0.testit.software",
-    "TmsApiKey": "WFoyQVFrVExQZUQ5dWZNbTdh"
+    "TmsApiKey": "WFoyQVFrVExQZUQ5dWZNbTdh",
+    "TestImporterDirectory": "D:\\SPBPU\\dipl\\TestItAllureImporterVenv",
   }
 }
