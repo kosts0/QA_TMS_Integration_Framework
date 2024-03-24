@@ -5,6 +5,7 @@ using System.Text.Json;
 using TestItAdapter;
 using TestProject;
 using TestRunnerWebApi;
+using TestRunnerWebApi.TestItAdapter;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,10 @@ builder.Services.Configure<IISServerOptions>(options =>
 });
 builder.Configuration.AddJsonFile("config.json");
 var app = builder.Build();
+
+Console.WriteLine("Starting init TestItApi");
+TestItApi.Init(GetConfig(builder.Configuration));
+Console.WriteLine("TestItApi init sucess");
 
 // Configure the HTTP request pipeline.
 //app.UseHttpsRedirection();
@@ -36,13 +41,22 @@ app.MapPut("/runTest", (HttpRequest request, IConfiguration appConfig) =>
     JToken requestBody = JToken.Parse(requestContent);
 
     Guid testRunId = Guid.Parse(requestBody["TestRunId"]?.ToString());
-    List<string> autotestList = requestBody.SelectTokens("$..AutoTests..Id").Select(t => t.ToString()).ToList();
+    List<string> autotestGlobalIdList = requestBody.SelectTokens("AutoTests[*].GlobalId").Select(t => t.ToString()).ToList();
+    RunnerConfig runnerConfig = GetConfig(appConfig);
     try
     {
-        string testRunReportFolder = "ExampleTestRun2";
-        CmdHelper.ExecuteCommand($"dotnet test TestProject.dll -v n --filter \"Name~NewTest\" -- TestRunParameters.Parameter(name=\\\"TestRunId\\\", value=\\\"{testRunReportFolder}\\\")", workingDirectory: @"D:\SPBPU\dipl\NUnit\bin\Debug\net6.0");
-        CmdHelper.ExecuteCommand(new ImportCommand(GetConfig(appConfig)) { TestResultDirectory = @$"D:\SPBPU\dipl\NUnit\bin\Debug\net6.0\allure-results\{testRunReportFolder}", TestRunId = testRunId }.ProcessInfo);
-        Console.WriteLine($"testRunned {DateTime.Now}\n");
+        foreach(var testId in autotestGlobalIdList)
+        {
+            string testRunReportFolder = Guid.NewGuid().ToString();
+            Console.WriteLine($"Saving test result for test {testId} in {testRunReportFolder}");
+            var manualTestId = TestItApi.AutoTestsApi.GetWorkItemsLinkedToAutoTest(testId).First().GlobalId;
+            Console.WriteLine($"Starting Test {manualTestId}");
+            CmdHelper.ExecuteCommand($"dotnet test {Path.GetFileName(runnerConfig.DllPath)} -v n --filter \"Name~{manualTestId}\" -- TestRunParameters.Parameter(name=\\\"TestRunId\\\", value=\\\"{testRunReportFolder}\\\")", workingDirectory: Path.GetDirectoryName(GetConfig(appConfig).DllPath));
+            Console.WriteLine($"TestExecute Completed");
+            CmdHelper.ExecuteCommand(new ImportCommand(GetConfig(appConfig)) { TestResultDirectory = @$"{Path.GetDirectoryName(GetConfig(appConfig).DllPath)}\allure-results\{testRunReportFolder}", TestRunId = testRunId }.ProcessInfo);
+            Console.WriteLine($"testRunned {DateTime.Now}\n");
+        }
+        
     }
     catch (Exception ex)
     {
