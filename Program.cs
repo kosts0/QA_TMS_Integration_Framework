@@ -41,7 +41,6 @@ app.MapPut("/runTest", (HttpRequest request, IConfiguration appConfig) =>
     {
         string testRunReportFolder = "ExampleTestRun2";
         CmdHelper.ExecuteCommand($"dotnet test TestProject.dll -v n --filter \"Name~NewTest\" -- TestRunParameters.Parameter(name=\\\"TestRunId\\\", value=\\\"{testRunReportFolder}\\\")", workingDirectory: @"D:\SPBPU\dipl\NUnit\bin\Debug\net6.0");
-        //CmdHelper.ExecuteCommand($@"D:\SPBPU\dipl\NUnit\bin\Debug\net6.0\allure-results\TestRun2 1c7d6d95-86e3-4afc-9a9a-6c8a6694a20a", workingDirectory: @"D:\SPBPU\dipl\TestItAllureImporterVenv", fileName: "UpdateResults.bat");
         CmdHelper.ExecuteCommand(new ImportCommand(GetConfig(appConfig)) { TestResultDirectory = @$"D:\SPBPU\dipl\NUnit\bin\Debug\net6.0\allure-results\{testRunReportFolder}", TestRunId = testRunId }.ProcessInfo);
         Console.WriteLine($"testRunned {DateTime.Now}\n");
     }

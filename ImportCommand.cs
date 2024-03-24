@@ -20,9 +20,8 @@ namespace TestRunnerWebApi
                     UseShellExecute = false,
                     RedirectStandardError = true,
                     RedirectStandardOutput = true,
-                    WorkingDirectory = RunnerConfig.TestImporterDirectory,
                     Arguments = $"{TestResultDirectory} {TestRunId}",
-                    FileName = "UpdateResults.bat"
+                    FileName = RunnerConfig.TestImporterDirectory + '/' + "UpdateResults.bat"
                 };
             }
             set => throw new NotImplementedException();
