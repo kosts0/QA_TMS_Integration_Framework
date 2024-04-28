@@ -9,7 +9,6 @@ namespace TestRunnerKafkaConsumer
     {
         private readonly IConsumer<Ignore, string> _consumer;
         private readonly ILogger<AgentOrcestratorServer> _logger;
-        WebSocketBehavior eh;
         RunnerConfig RunnerConfig = new();
         public AgentOrcestratorServer(IConfiguration configuration, ILogger<AgentOrcestratorServer> logger)
         {
