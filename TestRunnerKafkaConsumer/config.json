@@ -1,0 +1,8 @@
+{
+  "RunnerConfig": {
+    "DllPath": "D:\\SPBPU\\dipl\\TestSolution\\TestProject\\bin\\Debug\\net6.0\\TestProject.dll",
+    "TmsUrl": "https://team-6sxv.testit.software",
+    "TmsApiKey": "ZHRzU3o3SGlBdlQxeXhqWkxn",
+    "TestImporterDirectory": "D:\\SPBPU\\dipl\\TestItAllureImporterVenv"
+  }
+}

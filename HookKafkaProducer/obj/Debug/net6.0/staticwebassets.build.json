@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "lQtK97uFbYjE2KsfVgMoSHRtVjrobLm2Vv9sENH8yG0=",
+  "Source": "HookKafkaProducer",
+  "BasePath": "_content/HookKafkaProducer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
