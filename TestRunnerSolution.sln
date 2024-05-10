@@ -9,9 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HookKafkaProducer", "..\Hoo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunnerClient", "..\RunnerClient\RunnerClient.csproj", "{F2AAF525-F5BD-4748-B335-96FC2B08F5B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunnerClient2", "..\RunnerClient2\RunnerClient2.csproj", "{8D2D3060-E740-40DD-AE46-C3AA14470D5E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibrary", "..\CommonLibrary\CommonLibrary.csproj", "{BBB5FC57-5BB8-4AD2-BCC9-004DA8BF45BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonLibrary", "..\CommonLibrary\CommonLibrary.csproj", "{BBB5FC57-5BB8-4AD2-BCC9-004DA8BF45BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +29,6 @@ Global
 		{F2AAF525-F5BD-4748-B335-96FC2B08F5B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2AAF525-F5BD-4748-B335-96FC2B08F5B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2AAF525-F5BD-4748-B335-96FC2B08F5B0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8D2D3060-E740-40DD-AE46-C3AA14470D5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D2D3060-E740-40DD-AE46-C3AA14470D5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D2D3060-E740-40DD-AE46-C3AA14470D5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D2D3060-E740-40DD-AE46-C3AA14470D5E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BBB5FC57-5BB8-4AD2-BCC9-004DA8BF45BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BBB5FC57-5BB8-4AD2-BCC9-004DA8BF45BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBB5FC57-5BB8-4AD2-BCC9-004DA8BF45BF}.Release|Any CPU.ActiveCfg = Release|Any CPU

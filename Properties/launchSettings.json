@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "WebApplication1": {
+    "RunnerKafkaConsumer (dev)": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": false,

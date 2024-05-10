@@ -16,7 +16,7 @@ namespace TestRunnerKafkaConsumer
             listener.Prefixes.Add(listenerPrefix);
             listener.Start();
             connectedClients = new ConcurrentDictionary<string, WebSocket>();
-            Console.WriteLine("Listening for WebSocket connections...");
+            Console.WriteLine($"Listening for WebSocket connections on {listenerPrefix}");
             StartAcceptWebSocket();
         }
 
