@@ -18,3 +18,6 @@
 - Kafka Consumer;
 
 ![Test agent server](Readme/TestAgentServer.PNG)
+
+### Overview
+The work is part of a master's thesis. Its full text can be found in the readme section.
