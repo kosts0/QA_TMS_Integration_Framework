@@ -4,14 +4,14 @@
     "D:\\SPBPU\\dipl\\TestRunnerSolution\\RunnerClient\\RunnerClient.csproj": {}
   },
   "projects": {
-    "D:\\SPBPU\\dipl\\CommonLibrary\\CommonLibrary.csproj": {
+    "D:\\SPBPU\\dipl\\TestRunnerSolution\\CommonLibrary\\CommonLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SPBPU\\dipl\\CommonLibrary\\CommonLibrary.csproj",
+        "projectUniqueName": "D:\\SPBPU\\dipl\\TestRunnerSolution\\CommonLibrary\\CommonLibrary.csproj",
         "projectName": "CommonLibrary",
-        "projectPath": "D:\\SPBPU\\dipl\\CommonLibrary\\CommonLibrary.csproj",
+        "projectPath": "D:\\SPBPU\\dipl\\TestRunnerSolution\\CommonLibrary\\CommonLibrary.csproj",
         "packagesPath": "C:\\Users\\skld0\\.nuget\\packages\\",
-        "outputPath": "D:\\SPBPU\\dipl\\CommonLibrary\\obj\\",
+        "outputPath": "D:\\SPBPU\\dipl\\TestRunnerSolution\\CommonLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -94,8 +94,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\SPBPU\\dipl\\CommonLibrary\\CommonLibrary.csproj": {
-                "projectPath": "D:\\SPBPU\\dipl\\CommonLibrary\\CommonLibrary.csproj"
+              "D:\\SPBPU\\dipl\\TestRunnerSolution\\CommonLibrary\\CommonLibrary.csproj": {
+                "projectPath": "D:\\SPBPU\\dipl\\TestRunnerSolution\\CommonLibrary\\CommonLibrary.csproj"
               }
             }
           }

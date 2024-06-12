@@ -59,7 +59,6 @@ D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\RunnerClient.deps
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\RunnerClient.runtimeconfig.json
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\RunnerClient.dll
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\RunnerClient.pdb
-D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\JsonSubTypes.dll
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\Microsoft.AspNetCore.Connections.Abstractions.dll
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\Microsoft.AspNetCore.Http.Connections.Client.dll
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\Microsoft.AspNetCore.Http.Connections.Common.dll
@@ -78,7 +77,6 @@ D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\Microsoft.Extensi
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\Microsoft.OpenApi.dll
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\Newtonsoft.Json.dll
-D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\Polly.dll
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -86,10 +84,7 @@ D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\System.IO.Pipelin
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\System.Text.Json.dll
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\System.Threading.Channels.dll
-D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\TestIT.ApiClient.dll
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
-D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\CommonLibrary.dll
-D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\CommonLibrary.pdb
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\obj\Debug\net6.0\RunnerClient.csproj.AssemblyReference.cache
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\obj\Debug\net6.0\RunnerClient.GeneratedMSBuildEditorConfig.editorconfig
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\obj\Debug\net6.0\RunnerClient.AssemblyInfoInputs.cache
@@ -106,3 +101,10 @@ D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\obj\Debug\net6.0\refint\RunnerClie
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\obj\Debug\net6.0\RunnerClient.pdb
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\obj\Debug\net6.0\RunnerClient.genruntimeconfig.cache
 D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\obj\Debug\net6.0\ref\RunnerClient.dll
+D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\appsettings.Prod.json
+D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\config.json
+D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\JsonSubTypes.dll
+D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\Polly.dll
+D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\TestIT.ApiClient.dll
+D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\CommonLibrary.dll
+D:\SPBPU\dipl\TestRunnerSolution\RunnerClient\bin\Debug\net6.0\CommonLibrary.pdb

@@ -64,12 +64,7 @@ D:\SPBPU\dipl\HookKafkaProducer\bin\Debug\net6.0\out\appsettings.json
 D:\SPBPU\dipl\HookKafkaProducer\bin\Debug\net6.0\out\HookKafkaProducer.deps.json
 D:\SPBPU\dipl\HookKafkaProducer\bin\Debug\net6.0\out\HookKafkaProducer.runtimeconfig.json
 D:\SPBPU\dipl\HookKafkaProducer\bin\Debug\net6.0\appsettings.Prod.json
-D:\SPBPU\dipl\TestRunnerSolution\HookKafkaProducer\bin\Debug\net6.0\out\web.config
 D:\SPBPU\dipl\TestRunnerSolution\HookKafkaProducer\bin\Debug\net6.0\appsettings.json
-D:\SPBPU\dipl\TestRunnerSolution\HookKafkaProducer\bin\Debug\net6.0\out\appsettings.Development.json
-D:\SPBPU\dipl\TestRunnerSolution\HookKafkaProducer\bin\Debug\net6.0\out\appsettings.json
-D:\SPBPU\dipl\TestRunnerSolution\HookKafkaProducer\bin\Debug\net6.0\out\HookKafkaProducer.deps.json
-D:\SPBPU\dipl\TestRunnerSolution\HookKafkaProducer\bin\Debug\net6.0\out\HookKafkaProducer.runtimeconfig.json
 D:\SPBPU\dipl\TestRunnerSolution\HookKafkaProducer\bin\Debug\net6.0\appsettings.Development.json
 D:\SPBPU\dipl\TestRunnerSolution\HookKafkaProducer\bin\Debug\net6.0\appsettings.Prod.json
 D:\SPBPU\dipl\TestRunnerSolution\HookKafkaProducer\bin\Debug\net6.0\HookKafkaProducer.exe

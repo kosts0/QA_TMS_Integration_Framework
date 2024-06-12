@@ -1390,8 +1390,8 @@
     },
     "CommonLibrary/1.0.0": {
       "type": "project",
-      "path": "../../CommonLibrary/CommonLibrary.csproj",
-      "msbuildProject": "../../CommonLibrary/CommonLibrary.csproj"
+      "path": "../CommonLibrary/CommonLibrary.csproj",
+      "msbuildProject": "../CommonLibrary/CommonLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1434,8 +1434,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\SPBPU\\dipl\\CommonLibrary\\CommonLibrary.csproj": {
-              "projectPath": "D:\\SPBPU\\dipl\\CommonLibrary\\CommonLibrary.csproj"
+            "D:\\SPBPU\\dipl\\TestRunnerSolution\\CommonLibrary\\CommonLibrary.csproj": {
+              "projectPath": "D:\\SPBPU\\dipl\\TestRunnerSolution\\CommonLibrary\\CommonLibrary.csproj"
             }
           }
         }
