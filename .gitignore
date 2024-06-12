@@ -1,7 +1,7 @@
 # Ignore the bin and obj directories
 **/bin/
 **/obj/
-
+obj/
 # Ignore user-specific files
 *.user
 
