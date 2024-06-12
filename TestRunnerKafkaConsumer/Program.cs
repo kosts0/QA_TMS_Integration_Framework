@@ -12,6 +12,7 @@ namespace KafkaWebSocketService
         //private static Dictionary<string, WebSocketHandler> connectedClients = new Dictionary<string, WebSocketHandler>();
         public static async Task Main(string[] args)
         {
+            Console.WriteLine(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT"));
             object queueLock = new object();
             IConfiguration Configuration = new ConfigurationBuilder()
               .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
@@ -43,9 +44,10 @@ namespace KafkaWebSocketService
                     var message = consumer.Consume(cancellationToken);
                     Console.WriteLine($"Прочитано сообщение из kafka {message.Value}");
                     // Пересылка сообещния по WebSocket всем подключенным клиентам
+                    WebSocket freeClient = null;
                     lock (queueLock)
                     {
-                        WebSocket freeClient = null;
+                        
                         KeyValuePair<string, WebSocket> firstKeyValue = new();
                         while (freeClient == null)
                         {
@@ -56,9 +58,9 @@ namespace KafkaWebSocketService
                                 freeClient = firstKeyValue.Value;
                                 WebSocketHandler.connectedClients.TryRemove(firstKeyValue.Key, out _);
                             }
-                        }
-                        server.Send(freeClient, message.Value);
+                        }   
                     }
+                    await server.Send(freeClient, message.Value);
                 }
                 catch (ConsumeException e)
                 {
