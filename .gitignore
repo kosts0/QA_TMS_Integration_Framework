@@ -19,7 +19,7 @@ packages/
 *.nupkg
 
 # Ignore project file artifacts
-*.cache
+**/*.assets.cache
 *.csproj.user
 *.suo
 
@@ -36,3 +36,4 @@ _ReSharper*/
 
 # Ignore Mac OS file system files
 .DS_Store
+/RunnerClient/obj/Debug/net6.0/RunnerClient.assets.cache
